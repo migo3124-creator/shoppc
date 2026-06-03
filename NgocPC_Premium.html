@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngọc PC - Sửa Chữa Máy Tính Chuyên Nghiệp</title>
+<style>
+:root{--navy:#0F172A;--blue:#2563EB;--white:#fff;--bg:#f8fafc;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{background:var(--bg);color:#111;scroll-behavior:smooth}
+header{position:sticky;top:0;background:rgba(15,23,42,.95);backdrop-filter:blur(8px);z-index:1000}
+nav{max-width:1200px;margin:auto;padding:16px;display:flex;justify-content:space-between;align-items:center}
+nav a{color:#fff;text-decoration:none;margin-left:20px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
+background:linear-gradient(rgba(15,23,42,.9),rgba(37,99,235,.7));}
+.hero h1{font-size:64px}
+.hero p{font-size:22px;margin:20px 0}
+.btn{display:inline-block;padding:14px 28px;border-radius:10px;text-decoration:none;color:#fff;background:var(--blue);margin:8px}
+section{max-width:1200px;margin:auto;padding:80px 20px}
+h2{text-align:center;color:var(--navy);margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;padding:25px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,.08);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.stats .card{text-align:center}
+.stats .num{font-size:40px;font-weight:bold;color:var(--blue)}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{padding:14px;border:1px solid #ddd;text-align:center}
+th{background:var(--navy);color:#fff}
+input,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc;border-radius:10px}
+button{padding:12px 20px;background:var(--blue);color:#fff;border:none;border-radius:10px;cursor:pointer}
+.contact{background:var(--navy);color:#fff;border-radius:20px}
+footer{background:#000;color:#fff;text-align:center;padding:25px}
+.float{position:fixed;right:20px;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;font-size:24px}
+.call{bottom:90px;background:#16a34a}
+.zalo{bottom:20px;background:#2563EB}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:768px){.hero h1{font-size:42px} nav{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<h2 style="color:white;margin:0">NGỌC PC</h2>
+<div>
+<a href="#services">Dịch vụ</a>
+<a href="#booking">Đặt lịch</a>
+<a href="#pricing">Bảng giá</a>
+<a href="#contact">Liên hệ</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>NGỌC PC</h1>
+<p>Sửa Chữa - Nâng Cấp - Bảo Hành Máy Tính Chuyên Nghiệp</p>
+<a href="tel:0386551125" class="btn">📞 Gọi Ngay</a>
+<a href="#contact" class="btn">💬 Zalo</a>
+</div>
+</section>
+
+<section class="stats reveal">
+<h2>Thống Kê</h2>
+<div class="grid">
+<div class="card"><div class="num">1000+</div>Khách hàng</div>
+<div class="card"><div class="num">500+</div>Thiết bị đã sửa</div>
+<div class="card"><div class="num">300+</div>Linh kiện cung cấp</div>
+<div class="card"><div class="num">99%</div>Hài lòng</div>
+</div>
+</section>
+
+<section id="services" class="reveal">
+<h2>Dịch Vụ</h2>
+<div class="grid">
+<div class="card">🔧 Sửa chữa máy tính & laptop</div>
+<div class="card">🛡️ Bảo hành sản phẩm</div>
+<div class="card">⚙️ Cung cấp linh kiện</div>
+<div class="card">💻 Cài đặt Windows & phần mềm</div>
+<div class="card">⌨️ Phụ kiện PC Custom</div>
+<div class="card">🚀 Nâng cấp Gaming PC</div>
+</div>
+</section>
+
+<section id="booking" class="reveal">
+<h2>Đặt Lịch Sửa Chữa</h2>
+<input placeholder="Họ và tên">
+<input placeholder="Số điện thoại">
+<input type="date">
+<textarea placeholder="Mô tả lỗi thiết bị"></textarea>
+<button>Đặt lịch ngay</button>
+</section>
+
+<section id="pricing" class="reveal">
+<h2>Bảng Giá</h2>
+<table>
+<tr><th>Dịch vụ</th><th>Giá</th></tr>
+<tr><td>Sửa PC</td><td>Liên hệ shop</td></tr>
+<tr><td>Sửa Laptop</td><td>Liên hệ shop</td></tr>
+<tr><td>Cài Windows</td><td>Liên hệ shop</td></tr>
+<tr><td>Linh kiện máy tính</td><td>Liên hệ shop</td></tr>
+<tr><td>PC Custom</td><td>Liên hệ shop</td></tr>
+</table>
+</section>
+
+<section class="reveal">
+<h2>Chính Sách Bảo Hành</h2>
+<div class="grid">
+<div class="card">✅ Kiểm tra miễn phí</div>
+<div class="card">✅ Bảo hành linh kiện</div>
+<div class="card">✅ Hỗ trợ kỹ thuật tận tâm</div>
+</div>
+</section>
+
+<section id="contact" class="contact reveal">
+<h2 style="color:white">Liên Hệ</h2>
+<p>📍 Đường Z115, Tân Thịnh, Thái Nguyên</p>
+<p>📞 0386551125</p>
+<p>💬 Zalo: Ngọc PC</p>
+<p>🕒 07:00 - 22:00</p>
+</section>
+
+<a href="tel:0386551125" class="float call">📞</a>
+<a href="#" class="float zalo">💬</a>
+
+<footer>
+<h3>NGỌC PC</h3>
+<p>Uy tín tạo niềm tin</p>
+<p>© 2026 Ngọc PC</p>
+</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
