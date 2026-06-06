@@ -5,22 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ngọc PC - Sửa Chữa Máy Tính Chuyên Nghiệp</title>
 <style>
-:root{--navy:#0F172A;--blue:#2563EB;--white:#fff;--bg:#f8fafc;}
+:root{
+
+--bg:#050816;
+
+--card:#0f172a;
+
+--green:#00ff88;
+
+--green2:#00d26a;
+
+--text:#ffffff;
+
+}
 *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
 body{background:var(--bg);color:#111;scroll-behavior:smooth}
 header{position:sticky;top:0;background:rgba(15,23,42,.95);backdrop-filter:blur(8px);z-index:1000}
 nav{max-width:1200px;margin:auto;padding:16px;display:flex;justify-content:space-between;align-items:center}
 nav a{color:#fff;text-decoration:none;margin-left:20px}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
-background:linear-gradient(rgba(15,23,42,.9),rgba(37,99,235,.7));}
-.hero h1{font-size:64px}
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+background:
+
+linear-gradient(
+rgba(5,8,22,.85),
+rgba(5,8,22,.92)
+),
+
+url("assets/bg.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+}
+.hero h1{
+
+font-size:80px;
+
+text-shadow:
+
+0 0 20px #00ff88,
+
+0 0 40px #00ff88;
+
+}
 .hero p{font-size:22px;margin:20px 0}
 .btn{display:inline-block;padding:14px 28px;border-radius:10px;text-decoration:none;color:#fff;background:var(--blue);margin:8px}
 section{max-width:1200px;margin:auto;padding:80px 20px}
 h2{text-align:center;color:var(--navy);margin-bottom:35px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#fff;padding:25px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,.08);transition:.3s}
-.card:hover{transform:translateY(-8px)}
+.card{
+
+background:
+
+rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+border:
+
+1px solid rgba(0,255,136,.2);
+
+border-radius:20px;
+
+box-shadow:
+
+0 0 20px rgba(0,255,136,.08);
+
+}
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+
+0 0 25px #00ff88;
+
+}
 .stats .card{text-align:center}
 .stats .num{font-size:40px;font-weight:bold;color:var(--blue)}
 table{width:100%;border-collapse:collapse;background:#fff}
@@ -36,13 +110,56 @@ footer{background:#000;color:#fff;text-align:center;padding:25px}
 .reveal{opacity:0;transform:translateY(30px);transition:.8s}
 .reveal.show{opacity:1;transform:none}
 @media(max-width:768px){.hero h1{font-size:42px} nav{flex-direction:column}}
+  .logo-wrap{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+}
+
+.logo-wrap img{
+
+width:60px;
+height:60px;
+object-fit:contain;
+
+}
+
+.logo-wrap h2{
+
+margin:0;
+color:white;
+
+}
+
+.logo-wrap p{
+
+margin:0;
+color:#00ff88;
+
+font-size:12px;
+
+}
 </style>
 </head>
 <body>
 
 <header>
 <nav>
-<h2 style="color:white;margin:0">NGỌC PC</h2>
+<div class="logo-wrap">
+
+<img src="assets/logo.png" alt="Ngọc PC Logo">
+
+<div>
+
+<h2>NGỌC PC</h2>
+
+<p>PREMIUM</p>
+
+</div>
+
+</div>
 <div>
 <a href="#services">Dịch vụ</a>
 <a href="#booking">Đặt lịch</a>
@@ -64,10 +181,10 @@ footer{background:#000;color:#fff;text-align:center;padding:25px}
 <section class="stats reveal">
 <h2>Thống Kê</h2>
 <div class="grid">
-<div class="card"><div class="num">1000+</div>Khách hàng</div>
-<div class="card"><div class="num">500+</div>Thiết bị đã sửa</div>
-<div class="card"><div class="num">300+</div>Linh kiện cung cấp</div>
-<div class="card"><div class="num">99%</div>Hài lòng</div>
+<div class="num" data-target="1000">0</div>Khách hàng</div>
+<div class="num" data-target="500">0</div>Thiết bị đã sửa</div>
+<div class="num" data-target="300">0</div>>Linh kiện cung cấp</div>
+<div class="num" data-target="99%">0</div>Hài lòng</div>
 </div>
 </section>
 
@@ -117,7 +234,7 @@ footer{background:#000;color:#fff;text-align:center;padding:25px}
 <h2 style="color:white">Liên Hệ</h2>
 <p>📍 Đường Z115, Tân Thịnh, Thái Nguyên</p>
 <p>📞 0386551125</p>
-<p>💬 Zalo: Ngọc PC</p>
+<p>💬 Zalo: minh ngoc</p>
 <p>🕒 07:00 - 22:00</p>
 </section>
 
@@ -136,6 +253,44 @@ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
 });
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
+<script>
 
+const counters=
+document.querySelectorAll(".num");
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=
++counter.dataset.target;
+
+const current=
++counter.innerText;
+
+const inc=
+target/100;
+
+if(current<target){
+
+counter.innerText=
+Math.ceil(current+inc);
+
+setTimeout(update,20);
+
+}else{
+
+counter.innerText=
+target+"+";
+
+}
+
+};
+
+update();
+
+});
+
+</script>
 </body>
 </html>
